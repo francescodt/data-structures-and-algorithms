@@ -163,7 +163,6 @@ const meetings = [
 
 let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 const sortMeetingsByDay = (arr) => {
-  // Solution code here...
   return arr.sort((a, b) => {
     let day1 = days.findIndex(day => day === a.dayOfWeek);
     let day2 = days.findIndex(day => day === b.dayOfWeek);
