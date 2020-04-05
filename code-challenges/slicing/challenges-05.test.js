@@ -209,6 +209,7 @@ const extractVowels = (str) => {
   return [arr1.join(''), arr2.join('')];
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 TESTS
 All the code below will verify that your functions are working to solve the challenges.
