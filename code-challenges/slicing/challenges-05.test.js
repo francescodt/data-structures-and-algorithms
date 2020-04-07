@@ -108,7 +108,7 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
     let result = [];
     recipe.steps.forEach(item => {
-      let b = item.indexOf(" ");
+      let b = item.indexOf('');
       result.push(item.slice(0, b));
     });
     return result;
