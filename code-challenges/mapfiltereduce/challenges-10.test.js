@@ -9,9 +9,15 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  return arr.reduce((target, input) => {
-      
- }, 0);
+    let count = input.reduce((accumulator, value, idx) => {
+        return accumulator.concat(value);
+      }, [])
+        .filter(item => {
+          if (item === target) {
+            return item;
+          }
+        })
+      return count.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
