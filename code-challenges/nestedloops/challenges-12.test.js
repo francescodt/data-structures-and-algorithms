@@ -114,7 +114,14 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let firstArray = numbers.map(arr => {
+    return arr.reduce((acc, cur) => {
+        return acc * cur;
+    }, 1);
+  });
+  return firstArray.reduce((acc, cur) => {
+    return acc * cur;
+  }, 1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,7 +141,15 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  let totalTemp =0;
+  let dayOfWeekCount = 0;
+  weather.forEach(week => {
+      week.forEach(temp => {
+          totalTemp += temp;
+          dayOfWeekCount++;
+      });
+  })
+  return  totalTemp/dayOfWeekCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
