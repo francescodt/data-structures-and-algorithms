@@ -170,7 +170,19 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+    let lowestAverage = 90;
+    weather.forEach(week => {
+        let weeklyTotal = 0;
+        let dayCount = 0;
+        week.forEach(temp => {
+            weeklyTotal += temp;
+            dayCount++;
+        });
+        let weeklyAverage = weeklyTotal / dayCount;
+        if(weeklyAverage < lowestAverage) {
+            lowestAverage = weeklyAverage;
+        }
+    }); return lowestAverage;
 };
 
 /* ------------------------------------------------------------------------------------------------
