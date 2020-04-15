@@ -198,7 +198,16 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  // Solution code here...
+    let firstArray = str.split('\n');
+    let secondArray = firstArray.map(item => {
+      return item.split(',');
+    });
+  
+    return secondArray.map(array => {
+      return array.reduce((accumulator, value) => {
+        return accumulator = accumulator + parseInt(value);
+      }, 0);
+    });
 };
 
 /* ------------------------------------------------------------------------------------------------
