@@ -43,8 +43,12 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+    const result = arr.map(str => {
+        const regex = /\D/g;
+        return str.replace(regex, '');
+      }); return result;
 };
+    
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -55,7 +59,11 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  let string = '';
+  for (let i = 1; i < str.length; i = i + 2) {
+    string = string + str.charAt(i);
+  }
+  return string;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,7 +73,9 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  return arr.every(string => {
+    return string.includes(':)');
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,7 +85,9 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  return arr.filter(string => {
+    return string.includes(target);
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,7 +97,9 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  return arr.every(string => {
+    return string.includes(target);
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
