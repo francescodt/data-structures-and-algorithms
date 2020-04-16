@@ -115,7 +115,9 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return arr.map(arr => {
+    return arr.filter(str => !str.includes('Brook'));
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -154,7 +156,9 @@ For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
 const characterByIndex = (arr) => {
-  // Solution code here...
+  return arr.map((str, idx) => {
+    return str.charAt(idx);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
